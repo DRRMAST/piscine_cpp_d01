@@ -1,28 +1,26 @@
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <cassert>
 #include <string>
-void readTxt(std::string file)
+void readFile(std::string file)
 {
-    ifstream infile; 
-    infile.open(file.data());
-	if(infile.is_open() == 0)
+	std::ifstream in(file);
+	if(!in)
 	{
-		cout << "my_cat: " << file.data() << ": No such file or directory" << endl;
+		std::cout << "my_cat: " << file << ": No such file or directory";
 		return;
 	}
-    string s;
-    while(getline(infile,s))
-    {
-        cout<<s<<endl;
-    }
-    infile.close();
+	std::ostringstream tmp;
+	tmp << in.rdbuf();
+	std::string str = tmp.str();
+	std::cout << str;
 }
 int main(int argc ,char **argv)
 {
 	if(argc == 1)
 	{
-		cout << "my_cat: Usage : ./my_cat file [...]" << endl;
+		std::cout << "my_cat: Usage : ./my_cat file [...]";
 		return 0;
 	}
 	int i = 1;
@@ -30,7 +28,7 @@ int main(int argc ,char **argv)
 	while(i < argc)
 	{
 		f = argv[i];
-		readTxt(f);
+		readFile(f);
 		i++;
 	}
 	return 0 ;

@@ -6,15 +6,14 @@ int main()
 	float re;
 	std::string type;
 	std::cin >> in >> type;
+	std::cout.precision(3);
 	if(type == "Fahrenheit")
 	{
-		re = 5.000 / 9.000 * ( in - 32.000 );
-		std::cout << std::setiosflags(std::ios::right) << std::setw(16) << std::setprecision(3) << std::fixed << re << std::setiosflags(std::ios::right) << std::setw(16) << "Celsius" ;
+		std::cout << std::fixed << std::setw(16) << (in - (float)32) / (float)1.8 << std::setw(16) << "Celsius" << std::endl;
 	}
 	if(type == "Celsius")
 	{
-		re = ((9.000 * in) / 5.000) + 32.000;
-		std::cout << std::setiosflags(std::ios::right) << std::setw(16) << std::setprecision(3) << std::fixed << re << std::setiosflags(std::ios::right) << std::setw(16) << "Fahrenheit" ;
-	}
+		std::cout <<  std::fixed << std::setw(16) << (in  * (float)1.8) + (float)32  << std::setw(16) <<"Fahrenheit" << std::endl;
+	}  
 	return 0 ;
 }

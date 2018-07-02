@@ -5,20 +5,21 @@
 #include <string>
 void readFile(std::string file)
 {
-	std::ifstream in(file);
-	if(!in)
+	std::ifstream my_stream;
+	std::string	buff;
+	my_stream.open(file);
+	if(my_stream)
 	{
-		std::cout << "my_cat: " << file << ": No such file or directory";
-		return;
+		while (getline(my_stream, buff, '\0'))
+		std::cout << buff;
+		my_stream.close();
 	}
-	std::ostringstream tmp;
-	tmp << in.rdbuf();
-	std::string str = tmp.str();
-	std::cout << str;
+	else
+		std::cerr << "my_cat: " << file << ": No such file or directory" << std::endl;
 }
 int main(int argc ,char **argv)
 {
-	if(argc == 1)
+	if(argc < 2)
 	{
 		std::cout << "my_cat: Usage : ./my_cat file [...]";
 		return 0;

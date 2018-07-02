@@ -38,7 +38,7 @@ bool SickKoala::takeDrug(std::string n)
 void SickKoala::overDrive(std::string n)
 {
 	
-	int begin = 0,i = 0;
+	int i = 0;
 	while(n[i] != 0)
 	{
 		if(n.compare(i,5,"Kreog") == 0)

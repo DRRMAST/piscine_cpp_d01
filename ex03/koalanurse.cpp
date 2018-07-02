@@ -42,8 +42,3 @@ void KoalaNurse::timeCheck()
 	}
 	
 }
-int main()
-{
-	KoalaNurse n(123);
-	return 0;
-}

@@ -10,6 +10,10 @@ SickKoala::~SickKoala()
 {
 	std::cout << "Mr."<< name << ": Kreooogg !! Je suis gueriiii !" << std::endl;
 }
+std::string SickKoala::getName()
+{
+	return name;
+}
 void SickKoala::poke()
 {
 	std::cout << "Mr." << name << ": Gooeeeeerrk !! :’(" << std::endl;

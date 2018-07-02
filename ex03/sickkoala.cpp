@@ -1,5 +1,5 @@
 #include <iostream>
-#include <strings.h>
+#include <string>
 #include "sickkoala.h"
 
 SickKoala::SickKoala(std::string n)
@@ -16,9 +16,9 @@ void SickKoala::poke()
 }
 bool SickKoala::takeDrug(std::string n)
 {
-	if(strcasecmp(n.c_str(), "mars") == 0 || (n == "Buronzand"))
+	if((n == "mars") || (n == "Buronzand"))
 	{
-		if (strcasecmp(n.c_str(), "mars") == 0)
+		if(n == "mars")
 		{
 			std::cout << "Mr." << name << ": Mars, et ca kreog !" << std::endl;
 		}

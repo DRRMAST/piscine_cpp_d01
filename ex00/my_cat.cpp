@@ -2,8 +2,7 @@
 #include <fstream>
 #include <cassert>
 #include <string>
-using namespace std;
-void readTxt(string file)
+void readTxt(std::string file)
 {
     ifstream infile; 
     infile.open(file.data());
@@ -27,7 +26,7 @@ int main(int argc ,char **argv)
 		return 0;
 	}
 	int i = 1;
-	string f;
+	std::string f;
 	while(i < argc)
 	{
 		f = argv[i];

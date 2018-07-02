@@ -1,16 +1,15 @@
 #ifndef SICKKOALA_H
 #define SICKKOALA_H
 #include <iostream>
-using namespace std;
 class SickKoala
 {
 	public:
-		SickKoala(string n);
+		SickKoala(std::string n);
 		~SickKoala();
 		void poke();
-		bool takeDrug(string n);
-		void overDrive(string n);
+		bool takeDrug(std::string n);
+		void overDrive(std::string n);
 	private:
-		string name;
+		std::string name;
 };
 #endif

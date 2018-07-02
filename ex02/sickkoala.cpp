@@ -1,42 +1,41 @@
 #include <iostream>
 #include <string>
 #include "sickkoala.h"
-using namespace std;
 
-SickKoala::SickKoala(string n)
+SickKoala::SickKoala(std::string n)
 {
 	name = n;
 }
 SickKoala::~SickKoala()
 {
-	cout << "Mr."<< name << ": Kreooogg !! Je suis gueriiii !";
+	std::cout << "Mr."<< name << ": Kreooogg !! Je suis gueriiii !";
 }
 void SickKoala::poke()
 {
-	cout << "Mr." << name << ": Gooeeeeerrk !! :’(";
+	std::cout << "Mr." << name << ": Gooeeeeerrk !! :’(";
 }
-bool SickKoala::takeDrug(string n)
+bool SickKoala::takeDrug(std::string n)
 {
 	if((n == "mars") || (n == "Buronzand"))
 	{
 		if(n == "mars")
 		{
-			cout << "Mr." << name << ": Mars, et ca kreog !";
+			std::cout << "Mr." << name << ": Mars, et ca kreog !";
 		}
 		if(n == "Buronzand")
 		{
-			cout << "Mr." << name << ": Et la fatigue a fait son temps ";
+			std::cout << "Mr." << name << ": Et la fatigue a fait son temps ";
 		}	
 		return true;
 	}
 	else
 	{	
-		cout << "Mr." << name << ": Goerkreog !";
+		std::cout << "Mr." << name << ": Goerkreog !";
 		return false;
 	}
 	
 }
-void SickKoala::overDrive(string n)
+void SickKoala::overDrive(std::string n)
 {
 	
 	int begin = 0,i = 0;
@@ -50,5 +49,5 @@ void SickKoala::overDrive(string n)
 		}
 		i++;
 	}
-	cout << "Mr." << name <<": " << n;
+	std::cout << "Mr." << name <<": " << n;
 }

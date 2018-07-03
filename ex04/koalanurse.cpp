@@ -35,9 +35,9 @@ void KoalaNurse::timeCheck()
 		std::cout << "Nurse " << ID << ": Je commence le travail !" << std::endl;
 		work_flag = 1;
 	}
-	if(work_flag == 1)
+	else if(work_flag == 1)
 	{
-		std::cout << "Nurse " << ID << ": Je rentre dans ma foret d’eucalyptus " << std::endl;
+		std::cout << "Nurse " << ID << ": Je rentre dans ma foret d'eucalyptus " << std::endl;
 		work_flag = 0;
 	}
 	

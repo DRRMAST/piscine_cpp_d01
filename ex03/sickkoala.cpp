@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include <strings.h>
 #include "sickkoala.h"
 
 SickKoala::SickKoala(std::string n)
@@ -24,7 +24,7 @@ bool SickKoala::takeDrug(std::string n)
 		}
 		if(n == "Buronzand")
 		{
-			std::cout << "Mr." << name << ": Et la fatigue a fait son temps " << std::endl;
+			std::cout << "Mr." << name << ": Et la fatigue a fait son temps !" << std::endl;
 		}	
 		return true;
 	}

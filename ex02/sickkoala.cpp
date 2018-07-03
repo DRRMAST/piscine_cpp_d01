@@ -51,5 +51,3 @@ void SickKoala::overDrive(std::string n)
 	}
 	std::cout << "Mr." << name <<": " << n << std::endl;
 }
-int main()
-{SickKoala s("seb");s.poke();}

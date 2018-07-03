@@ -12,7 +12,7 @@ SickKoala::~SickKoala()
 }
 void SickKoala::poke()
 {
-	std::cout << "Mr." << name << ": Gooeeeeerrk !! :’(" << std::endl;
+	std::cout << "Mr." << name << ": Gooeeeeerrk !! :'(" << std::endl;
 }
 bool SickKoala::takeDrug(std::string n)
 {
@@ -51,3 +51,5 @@ void SickKoala::overDrive(std::string n)
 	}
 	std::cout << "Mr." << name <<": " << n << std::endl;
 }
+int main()
+{SickKoala s("seb");s.poke();}

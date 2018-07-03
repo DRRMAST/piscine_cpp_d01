@@ -33,3 +33,5 @@ void KoalaDoctor::timeCheck()
 		work_flag = 0;
 	}
 }
+int main()
+{return 0;}

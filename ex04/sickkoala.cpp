@@ -16,13 +16,13 @@ std::string SickKoala::getName()
 }
 void SickKoala::poke()
 {
-	std::cout << "Mr." << name << ": Gooeeeeerrk !! :’(" << std::endl;
+	std::cout << "Mr." << name << ": Gooeeeeerrk !! :'(" << std::endl;
 }
 bool SickKoala::takeDrug(std::string n)
 {
-	if((n == "mars") || (n == "Buronzand"))
+	if(strcasecmp(n.c_str(), "mars") == 0 || (n == "Buronzand"))
 	{
-		if(n == "mars")
+		if (strcasecmp(n.c_str(), "mars") == 0)
 		{
 			std::cout << "Mr." << name << ": Mars, et ca kreog !" << std::endl;
 		}

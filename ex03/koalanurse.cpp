@@ -42,11 +42,3 @@ void KoalaNurse::timeCheck()
 	}
 	
 }
-int main()
-{
-	SickKoala s("seb");
-	KoalaNurse n(69);
-	n.timeCheck();
-	n.giveDrug("Mars",&s);
-	n.timeCheck();
-}

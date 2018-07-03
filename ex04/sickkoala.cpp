@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include <strings.h>
 #include "sickkoala.h"
 
 SickKoala::SickKoala(std::string n)

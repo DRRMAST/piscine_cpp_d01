@@ -1,7 +1,10 @@
 #include <iostream>
 #include <fstream>
+#include <stdlib.h> 
+#include <math.h> 
 #include "sickkoala.h"
 #include "koaladoctor.h"
+#include "koalanurse.h"
 KoalaDoctor::KoalaDoctor(std::string name)
 {
 	name = name;
